@@ -16,7 +16,8 @@ syntax keyword tigerStructure array of nil
 syntax keyword tigerBuiltInType int string
 syntax keyword tigerBuiltInFn print printi flush getchar ord chr size substring concat not exit
 syntax keyword tigerOperator := + - * / \| &
-syntax match tigerIntegerLiteral '[0-9][0-9]*'
+syntax match tigerIntegerLiteral '[0-9]\+'
+syntax match tigerIdentifier '[a-zA-Z_][a-zA-Z_0-9]\+'
 syntax match tigerEscapeSequence '\\[\\nt"]' contained
 syntax region tigerStringLiteral oneline start='"' skip='\\"' end='"' end='$' contains=tigerEscapeSequence
 
